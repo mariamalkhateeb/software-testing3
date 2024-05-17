@@ -1,0 +1,9 @@
+{
+    "signUpLoginUrl":"https://www.automationexercise.com/login",
+    "correctPassword":"1234567890",
+    "incorrectPassword":"123456789",
+    "email":"mariam@gmail.com",
+    "name":"mariam alkhateeb",
+    "incorrectEmail":"mariamgmail.com"
+
+}
