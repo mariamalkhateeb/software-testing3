@@ -1,3 +1,5 @@
+import products from "../support/POM/product-pom";
+const prod = new products();
 describe('product', () => {
 
     before(function(){
@@ -50,16 +52,25 @@ describe('product', () => {
 
         cy.brand().click()
         cy.product2().click()
-        cy.AddToCart().click()
-        cy.continue().click()
+        // cy.AddToCart().click()
+        // cy.continue().click()
+        prod.addThenContinue();
+        
 
         
     });
-    it('[6] search a specific product', () => {
+    it('[6] select H&M brand then add to cart then view cart', () => {
+
+      cy.brand().click()
+      cy.product2().click()
+      cy.viewCart().click()    
+  });
+
+    it('[7] search a specific product', () => {
         cy.search().type(data.searchValue)
         cy.searchBtn()
     });
-    it('[7] select a product from all products', () => {
+    it('[8] select a product from all products', () => {
 
         cy.addToCart().click()
     });
